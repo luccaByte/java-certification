@@ -5,6 +5,6 @@ NLW 14: Expert
 
 - Java 17
 - Maven 
-- Spring Initializr: [App](https://start.spring.io/)
+- [Spring Initializr](https://start.spring.io/)
 - Rest Client (Postman) 
 - Docker
