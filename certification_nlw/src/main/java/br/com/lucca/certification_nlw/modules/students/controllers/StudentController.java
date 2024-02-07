@@ -17,7 +17,7 @@ public class StudentController {
     @Autowired
     private VerifyIfHasCertificationUseCase verifyIfHasCertificationUseCase;
     
-    @PostMapping("/verifyIfHasCertification")
+    @PostMapping("/verifyIfHasCertification") // POST
     public String verifyIfHasCertification(@RequestBody VerifyHasCertificationDTO verifyHasCertificationDTO) {
         // Email
         // Technology
