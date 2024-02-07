@@ -3,6 +3,7 @@ package br.com.lucca.certification_nlw.modules.students.controllers;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.lucca.certification_nlw.modules.students.dto.VerifyHasCertificationDTO;
+import br.com.lucca.certification_nlw.modules.students.useCases.VerifyIfHasCertificationUseCase;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +19,7 @@ public class StudentController {
     private VerifyIfHasCertificationUseCase verifyIfHasCertificationUseCase;
     
     @PostMapping("/verifyIfHasCertification")
+        
     public String verifyIfHasCertification(@RequestBody VerifyHasCertificationDTO verifyHasCertificationDTO) {
         // Email
         // Technology
@@ -28,7 +30,5 @@ public class StudentController {
         } else {
             return "O usuário pode fazer a prova";
         }
-        System.out.println(verifyHasCertificationDTO);
-        return "Usuário está liberado para a prova";
     }
 }
