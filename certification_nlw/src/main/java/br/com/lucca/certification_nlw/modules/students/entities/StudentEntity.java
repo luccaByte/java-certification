@@ -1,6 +1,10 @@
 package br.com.lucca.certification_nlw.modules.students.entities;
 
 import java.util.UUID;
+
+import org.hibernate.annotations.CreationTimestamp;
+
+import java.time.LocalDateTime;
 import java.util.List;
 
 import jakarta.persistence.Column;
@@ -33,4 +37,7 @@ public class StudentEntity {
 
     @OneToMany(mappedBy = "studentEntity")
     private List<CertificationStudentEntity> certificationStudentEntity;
+
+    @CreationTimestamp
+    private LocalDateTime createdAt;
 }

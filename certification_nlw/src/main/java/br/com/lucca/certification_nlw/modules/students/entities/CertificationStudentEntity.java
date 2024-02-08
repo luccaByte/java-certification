@@ -2,6 +2,8 @@ package br.com.lucca.certification_nlw.modules.students.entities;
 
 import java.util.UUID;
 
+import org.hibernate.annotations.CreationTimestamp;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -9,10 +11,12 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Data // Coloca automaticamente os Getters e Setters (MUITO UTIL BRIGADO LOMBOK)
@@ -37,5 +41,11 @@ public class CertificationStudentEntity {
     @ManyToOne
     @JoinColumn(name = "student_id", insertable = false, updatable = false)
     private StudentEntity studentEntity;
-    // List<AnswersCertificationsEntity> answersCertificationsEntity;
+
+    @OneToMany
+    @JoinColumn(name = "answer_certification_id", insertable = false, updatable = false)
+    List<AnswersCertificationsEntity> answersCertificationsEntity;
+
+    @CreationTimestamp
+    private LocalDateTime createdAt;
 }
