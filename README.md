@@ -1,13 +1,14 @@
 # Java-Certification
-NLW 14: Expert
+
+Um projeto back-end para uma validação de certificado utilizando Java, Spring Boot e Maven
 
 ## Tecnologias
 
-- Java 17
-- Maven 
+- [Java](https://docs.oracle.com/en/java/)
+- [Maven](https://maven.apache.org/guides/index.html) 
 - [Spring Initializr](https://start.spring.io/)
-- Rest Client (Postman) 
-- Docker
+- [Rest Client com Postman](https://www.postman.com/)
+- [Docker](https://docs.docker.com/)
 
 ## Links Úteis
 
