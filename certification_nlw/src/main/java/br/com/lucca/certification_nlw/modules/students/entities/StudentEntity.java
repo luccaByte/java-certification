@@ -14,6 +14,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -21,6 +22,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor // Coloca os construtores automaticamente para todos os atributos
 @NoArgsConstructor  
 @Entity (name = "students") // nome da entidade
+@Builder
 public class StudentEntity {
     
     @Id

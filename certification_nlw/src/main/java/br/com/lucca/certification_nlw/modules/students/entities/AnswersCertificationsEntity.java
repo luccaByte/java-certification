@@ -15,11 +15,13 @@ import jakarta.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.Builder;
 
 @Data // Coloca automaticamente os Getters e Setters (MUITO UTIL BRIGADO LOMBOK)
 @AllArgsConstructor // Coloca os construtores automaticamente para todos os atributos
 @NoArgsConstructor  
 @Entity(name = "answers_certification_students")
+@Builder
 public class AnswersCertificationsEntity {
     
     @Id

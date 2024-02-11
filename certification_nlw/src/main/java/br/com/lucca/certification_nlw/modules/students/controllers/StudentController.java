@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.lucca.certification_nlw.modules.students.dto.StudentCertificationAnswersDTO;
+import br.com.lucca.certification_nlw.modules.students.dto.StudentCertificationAnswerDTO;
 import br.com.lucca.certification_nlw.modules.students.dto.VerifyHasCertificationDTO;
 import br.com.lucca.certification_nlw.modules.students.useCases.StudentCertificationAnswersUseCase;
 import br.com.lucca.certification_nlw.modules.students.useCases.VerifyIfHasCertificationUseCase;

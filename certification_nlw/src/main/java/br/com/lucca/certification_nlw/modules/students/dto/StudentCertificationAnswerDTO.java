@@ -11,11 +11,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class StudentCertificationAnswersDTO {
+public class StudentCertificationAnswerDTO {
     
-
     private String email;
     private String technology;
     private List<QuestionAnswerDTO> questionAnswers;
-
 }
