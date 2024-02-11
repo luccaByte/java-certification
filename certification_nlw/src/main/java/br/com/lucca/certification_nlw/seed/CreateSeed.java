@@ -40,8 +40,7 @@ public class CreateSeed {
 
             System.out.println("Seed realizado com sucesso!");
         } catch (IOException e) {
-            // TODO: handle exception
-            System.err.println("Erro ao executar arquivo" + e.getMessage());
+            System.err.println("Erro ao executar arquivo: " + e.getMessage());
         }
         
     }
