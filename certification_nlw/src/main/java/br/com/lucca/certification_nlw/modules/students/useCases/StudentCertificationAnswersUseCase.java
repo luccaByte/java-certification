@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 import java.util.concurrent.atomic.AtomicInteger;
-import org.springframework.lang.NonNull;
 
 import br.com.lucca.certification_nlw.modules.questions.repositories.QuestionRepository;
 import br.com.lucca.certification_nlw.modules.students.dto.StudentCertificationAnswerDTO;
@@ -35,7 +34,7 @@ public class StudentCertificationAnswersUseCase {
     private VerifyIfHasCertificationUseCase verifyIfHasCertificationUseCase;
 
     public CertificationStudentEntity execute(StudentCertificationAnswerDTO dto) throws Exception {
-        // verificar se o usuario existe
+        // verificar se o usuario tem certificação
         var hasCertification = this.verifyIfHasCertificationUseCase
                 .execute(new VerifyHasCertificationDTO(dto.getEmail(), dto.getTechnology()));
 
@@ -48,7 +47,7 @@ public class StudentCertificationAnswersUseCase {
         List<QuestionEntity> questionsEntity = questionRepository.findByTechnology(dto.getTechnology());
         List<AnswersCertificationsEntity> answersCertifications = new ArrayList<>();
 
-        AtomicInteger correctAnswers = new AtomicInteger(0);
+        AtomicInteger correctAnswers = new AtomicInteger(0); // contador 
 
         dto.getQuestionAnswers()
                 .stream().forEach(questionAnswer -> {
@@ -60,7 +59,7 @@ public class StudentCertificationAnswersUseCase {
 
                     if (findCorrectAlternative.getId().equals(questionAnswer.getAlternativeID())) {
                         questionAnswer.setCorrect(true);
-                        correctAnswers.incrementAndGet();
+                        correctAnswers.incrementAndGet(); // incrementando o contador
                     } else {
                         questionAnswer.setCorrect(false);
                     }
