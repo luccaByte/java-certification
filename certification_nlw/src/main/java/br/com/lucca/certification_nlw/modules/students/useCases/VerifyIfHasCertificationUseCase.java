@@ -16,8 +16,8 @@ public class VerifyIfHasCertificationUseCase {
         var result = this.certificationStudentRepository.findByStudentEmailAndTechnology(dto.getEmail(), dto.getTechnology());
         if (!result.isEmpty()) {
             return true;
-        } else {
-            return false;
-        }
+        } 
+        return false;
+        
     }
 }
