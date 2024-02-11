@@ -21,6 +21,6 @@ public class RankingController {
 
     @GetMapping("/top10")
     public List<CertificationStudentEntity> top10() {
-        this.top10RankingUseCase.execute();
+        return this.top10RankingUseCase.execute();
     }
 }
